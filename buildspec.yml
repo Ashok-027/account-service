@@ -1,0 +1,14 @@
+version:
+
+phases:
+  build:
+    commands:
+        -echo Entered the build phase...
+        -mvn clean package
+    post build:
+      command:
+        -echo Build completed successfully
+artifacts:
+  files:
+    -target/authentication-service.jar
+  discard-paths: yes
